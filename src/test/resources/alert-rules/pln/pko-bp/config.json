@@ -1,0 +1,11 @@
+[
+  [
+    {
+      "alert": "personal account balance are not sufficient",
+      "rule": { "<": [
+        {"var": "personal"},
+        5000
+      ]}
+    }
+  ]
+]

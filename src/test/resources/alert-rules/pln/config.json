@@ -1,0 +1,26 @@
+[
+  {
+    "alert": "personal accounts difference warning",
+    "rule": { ">": [
+      {"abs": [
+        { "-": [
+          {"var": "personal"},
+          {"var": "secondPersonal"}
+        ]}
+      ]},
+      1000
+    ]}
+  },
+  {
+    "alert": "personal accounts difference critical",
+    "rule": { ">": [
+      {"abs":  [
+        { "-": [
+          {"var": "personal"},
+          {"var": "secondPersonal"}
+        ]}
+      ]},
+      3000
+    ]}
+  }
+]

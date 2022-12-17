@@ -1,0 +1,13 @@
+[
+  {
+    "alert": "saving account balance to brokerage account balance ratio is too low",
+    "rule": { "<": [
+      { "/": [
+        {"var": "savings"},
+        {"var": "brokerage"}
+      ]},
+      0.25
+    ]}
+  }
+]
+
