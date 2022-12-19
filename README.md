@@ -3,7 +3,7 @@
 Application is processing input data by checking rules externalized in JSON file.
 
 Rules configs are stored in the config files `config.json` in `alert-rules` directory, example rule:
-```aidl
+```JSON
 { "<": [
     { "/": [
         {"var": "savings"},
@@ -14,7 +14,7 @@ Rules configs are stored in the config files `config.json` in `alert-rules` dire
 ```
 
 Input data is stored in `fund_balance.json`, example value:
-```aidl
+```JSON
 {
   "personal": "5000",
   "secondPersonal": "5000",
@@ -37,7 +37,7 @@ For processing rules we are using [json-logic](https://jsonlogic.com/) standard 
 Library already defined several dozen of operators, but allow also adding new ones.
 
 Example naive implementation of new operation: `abs` standing for `absolut value`
-```aidl
+```
   private val abs: Array[AnyRef] => Double = args => Math.abs(args.head.asInstanceOf[Double])
   val jsonLogic: JsonLogic =
     new JsonLogic()
